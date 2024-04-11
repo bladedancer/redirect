@@ -2,7 +2,7 @@ function redirectFail() {
     console.log("Sending XHR to 8086");
     const req = new XMLHttpRequest();
     req.addEventListener("load", reqListener);
-    req.open("GET", "http://192.168.1.138:8086/redirectFail");
+    req.open("GET", `http://${location.hostname}:8086/redirectFail`);
     req.send();
 }
 
@@ -10,7 +10,7 @@ function redirectSucceed() {
     console.log("Sending XHR to 8086");
     const req = new XMLHttpRequest();
     req.addEventListener("load", reqListener);
-    req.open("GET", "http://192.168.1.138:8086/redirectSucceed");
+    req.open("GET", `http://${location.hostname}:8086/redirectSucceed`);
     req.send();
 }
 
